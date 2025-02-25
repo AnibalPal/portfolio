@@ -1,1 +1,0 @@
-import{w as o}from"./with-props-Db1jVSdq.js";import{l as r}from"./chunk-HA7DTUK3-DItZKCSJ.js";import{u as s}from"./useTranslation-D9n5x7Ng.js";const n=()=>{const{t}=s();return r.jsx("div",{children:t("about.title")})},m=o(n);export{m as default};
