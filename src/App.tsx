@@ -1,33 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { NavLink } from 'react-router'
 import './App.css'
+import "../i18n"
+import { useTranslation } from 'react-i18next';
+
+type Languages = "en" | "es";
+
+const languages: Languages[] = ["en", "es"];
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const { t, i18n } = useTranslation();
 
   return (
     <>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <h3>{t("home.title")}</h3>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+      <div>
+        <p><b>Language changer</b></p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div className='stack'>
+        {
+          languages.map((lang) => {
+            return (
+              <button onClick={() => { i18n.changeLanguage(lang) }}>
+                {lang}
+              </button>
+            )
+          })
+        }
+      </div>
+      <div>
+        <p><b>Router testing</b></p>
+      </div>
+      <div className='stack'>
+        <NavLink to="/about">
+          About
+        </NavLink>
+        <NavLink to="/proyects">
+          Proyects
+        </NavLink>
+      </div>
     </>
   )
 }
