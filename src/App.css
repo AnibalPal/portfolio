@@ -1,12 +1,53 @@
+html {
+  --background: #f1f0f7;
+  --foreground: #111111;
+  --bg-button: #aea9cc;
+}
+
+html[data-theme='dark'] {
+  --background: #111111;
+  --foreground: #f1f0f7;
+  --bg-button: #463b83;
+}
+
+/* :root {
+  --background: #f1f0f7;
+  --foreground: #111111;
+  --bg-button: #aea9cc;
+} */
+
+/* :root {
+  --background: #111111;
+  --foreground: #f1f0f7;
+  --bg-button: #463b83;
+} */
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  background-color: var(--background);
+  width: 100vw;
 }
 
 .stack {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+p {
+  color: var(--foreground);
+}
+
+h3 {
+  color: var(--foreground);
+}
+
+button {
+  background-color: var(--bg-button);
+  color: var(--foreground);
+  width: fit-content;
+  align-self: center;
+}
+
+a {
+  color: var(--foreground);
 }

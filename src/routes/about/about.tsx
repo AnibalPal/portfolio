@@ -1,18 +1,18 @@
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router";
 
-const Proyects = () => {
-    
-    const {t} = useTranslation();
-    
+const About = () => {
+
+    const { t } = useTranslation();
+
     return (
         <div>
-            <p>{t("proyects.title")}</p>
-            <NavLink to="/">
+            <p>{t("about.title")}</p>
+            <NavLink to="/home">
                 {t("common.goBackAction")}
             </NavLink>
         </div>
     )
 }
 
-export default Proyects;
+export default About;
