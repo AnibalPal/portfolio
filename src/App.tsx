@@ -1,13 +1,13 @@
-import { NavLink, Outlet, useLocation, useNavigate } from 'react-router'
+import { Outlet, useLocation, useNavigate } from 'react-router'
 import './App.css'
 import "../i18n"
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
 import Navbar from './components/navbar';
 
-type Languages = "en" | "es";
+// type Languages = "en" | "es";
 
-const languages: Languages[] = ["en", "es"];
+// const languages: Languages[] = ["en", "es"];
 
 function App() {
 
@@ -32,15 +32,15 @@ function App() {
     }
   }, [])
 
-  const changeTheme = () => {
-    if (document.documentElement.getAttribute("data-theme") === "dark") {
-      document.documentElement.setAttribute("data-theme", "light");
-      localStorage.setItem("theme", "light");
-    } else {
-      document.documentElement.setAttribute("data-theme", "dark");
-      localStorage.setItem("theme", "dark");
-    }
-  }
+  // const changeTheme = () => {
+  //   if (document.documentElement.getAttribute("data-theme") === "dark") {
+  //     document.documentElement.setAttribute("data-theme", "light");
+  //     localStorage.setItem("theme", "light");
+  //   } else {
+  //     document.documentElement.setAttribute("data-theme", "dark");
+  //     localStorage.setItem("theme", "dark");
+  //   }
+  // }
 
   return (
     <>

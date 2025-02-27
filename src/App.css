@@ -1,44 +1,15 @@
-html {
-  --background: #f1f0f7;
-  --foreground: #111111;
-  --bg-button: #aea9cc;
+/* Use this one for global classes */
+
+p.small {
+  font-size: 16px;
 }
 
-html[data-theme='dark'] {
-  --background: #111111;
-  --foreground: #f1f0f7;
-  --bg-button: #463b83;
+p.medium {
+  font-size: 24px;
 }
 
-/* :root {
-  --background: #f1f0f7;
-  --foreground: #111111;
-  --bg-button: #aea9cc;
-} */
-
-/* :root {
-  --background: #111111;
-  --foreground: #f1f0f7;
-  --bg-button: #463b83;
-} */
-
-#root {
-  background-color: var(--background);
-  width: 100vw;
-}
-
-.stack {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-p {
-  color: var(--foreground);
-}
-
-h3 {
-  color: var(--foreground);
+p.large {
+  font-size: 32px;
 }
 
 button {

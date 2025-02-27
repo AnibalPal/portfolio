@@ -1,7 +1,7 @@
 const Home = () => {
     return (
         <div>
-            <p>Select things in the center</p>
+            <p className="small">Select things in the center</p>
         </div>
     )
 }
