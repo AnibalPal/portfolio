@@ -1,0 +1,77 @@
+.sun-icon-container {
+    background-color: var(--background);
+    --line-width: 2px;
+    --container-size: 48px;
+    --center-size: 8px;
+    --center-x: calc(var(--container-size)/2.5);
+    --center-y: calc(var(--container-size)/2 - var(--center-size)/2);
+    --line-offset: calc(var(--center-size)/2 + 4px);
+    width: var(--container-size);
+    height: var(--container-size);
+}
+
+.sun-icon-container .center {
+    position: absolute;
+    transform: rotate(45deg);
+    top: calc(var(--center-y));
+    left: calc(var(--center-x) + 1px);
+    width: var(--center-size);
+    height: var(--center-size);
+    background-color: var(--foreground);
+}
+
+
+.sun-icon-container .line {
+    position: absolute;
+    height: 0;
+    width: var(--center-size);
+    border: solid;
+    border-width: var(--line-width);
+    border-color: var(--foreground);
+}
+
+.sun-icon-container .line.left {
+    left: calc(var(--center-x) - var(--center-size) - var(--line-offset));
+    top: calc(var(--center-y) + var(--center-size)/2 - var(--line-width));
+}
+
+.sun-icon-container .line.top-left {
+    transform: rotate(45deg);
+    left: calc(var(--center-x) - var(--center-size)/2 - var(--line-offset));
+    top: calc(var(--center-y) - var(--center-size)/2 - var(--line-offset)/2);
+}
+
+.sun-icon-container .line.top {
+    transform: rotate(90deg);
+    left: calc(var(--center-x) - var(--line-width)/2);
+    top: calc(var(--center-y) - var(--center-size) - var(--line-offset)/2);
+}
+
+.sun-icon-container .line.top-right {
+    transform: rotate(135deg);
+    left: calc(var(--center-x) + var(--center-size)/2 + var(--line-offset));
+    top: calc(var(--center-y) - var(--center-size)/2 - var(--line-offset)/2);
+}
+
+.sun-icon-container .line.right {
+    left: calc(var(--center-x) + var(--center-size) + var(--line-offset));
+    top: calc(var(--center-y) + var(--center-size)/2 - var(--line-width));
+}
+
+.sun-icon-container .line.bottom-right {
+    transform: rotate(45deg);
+    left: calc(var(--center-x) + var(--center-size)/2 + var(--line-offset));
+    top: calc(var(--center-y) + var(--center-size) * 1.5);
+}
+
+.sun-icon-container .line.bottom {
+    transform: rotate(90deg);
+    left: calc(var(--center-x) - var(--line-width)/2);
+    top: calc(var(--center-y) + var(--center-size) * 2);
+}
+
+.sun-icon-container .line.bottom-left {
+    transform: rotate(135deg);
+    left: calc(var(--center-x) - var(--center-size)/2 - var(--line-offset));
+    top: calc(var(--center-y) + var(--center-size) * 1.5);
+}

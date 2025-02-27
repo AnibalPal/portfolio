@@ -12,13 +12,8 @@ p.large {
   font-size: 32px;
 }
 
-button {
-  background-color: var(--bg-button);
-  color: var(--foreground);
-  width: fit-content;
-  align-self: center;
-}
-
-a {
-  color: var(--foreground);
+.anchor {
+  position: relative;
+  width: 0px;
+  height: 0px;
 }

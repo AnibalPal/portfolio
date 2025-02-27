@@ -1,0 +1,30 @@
+.navbar-base-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 16px;
+}
+
+.navbar-links-container {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.navbar-link {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-settings-container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 16px;
+    width: 200px;
+}
+
+.navbar-theme-switcher {
+    cursor: pointer;
+}

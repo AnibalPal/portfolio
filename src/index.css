@@ -7,6 +7,9 @@ html {
   --background: #f1f0f7;
   --foreground: #111111;
   --bg-button: #aea9cc;
+  --font-small: 16px;
+  --font-medium: 24px;
+  --font-large: 32px;
 }
 
 html[data-theme='dark'] {
@@ -38,6 +41,7 @@ body {
 }
 
 p {
+  margin: 0;
   color: var(--foreground);
 }
 

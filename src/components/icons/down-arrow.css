@@ -1,0 +1,22 @@
+.down-arrow-container {
+    color: var(--foreground);
+}
+
+.down-arrow-line-left,
+.down-arrow-line-right {
+    position: absolute;
+    width: 8px;
+    height: 0px;
+    border: solid;
+    border-color: var(--foreground);
+    border-width: 2px;
+}
+
+.down-arrow-line-left {
+    transform: rotate(45deg);
+}
+
+.down-arrow-line-right {
+    transform: rotate(-45deg);
+    left: 6px;
+}

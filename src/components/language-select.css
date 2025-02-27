@@ -1,0 +1,19 @@
+select.language-select-container {
+    width: 100px;
+    padding: 4px;
+    font-family: pixelify-sans, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: var(--font-medium);
+    color: var(--foreground);
+    background-color: var(--background);
+    border: 2px solid var(--foreground);
+    height: fit-content;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+.language-select-position-div {
+    position: absolute;
+    left: 74px;
+    bottom: 22px;
+}

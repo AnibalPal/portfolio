@@ -2,6 +2,9 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 
+import enTranslations from "./translations/en";
+import esTranslations from "./translations/es";
+
 i18n
     .use(LanguageDetector)
     .use(initReactI18next)
@@ -13,36 +16,10 @@ i18n
         },
         resources: {
             en: {
-                translation: {
-                    common: {
-                        goBackAction: "Go back"
-                    },
-                    home: {
-                        title: "Home page"
-                    },
-                    about: {
-                        title: "About me page"
-                    },
-                    proyects: {
-                        title: "Proyects page"
-                    },
-                }
+                translation: enTranslations
             },
             es: {
-                translation: {
-                    common: {
-                        goBackAction: "Volver"
-                    },
-                    home: {
-                        title: "Página de inicio"
-                    },
-                    about: {
-                        title: "Página sobre mi"
-                    },
-                    proyects: {
-                        title: "Página proyectos"
-                    }
-                }
+                translation: esTranslations
             }
         }
     })
