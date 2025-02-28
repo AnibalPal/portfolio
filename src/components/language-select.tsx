@@ -19,9 +19,9 @@ const LanguageSelect = () => {
                 onChange={(e) => { i18n.changeLanguage(e.target.value) }}
             >
                 {
-                    languages.map((lang) => {
+                    languages.map((lang, idx) => {
                         return (
-                            <option value={lang}>
+                            <option key={"lang-" + idx} value={lang}>
                                 {lang.toUpperCase()}
                             </option>
                         )
