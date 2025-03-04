@@ -1,0 +1,52 @@
+@keyframes fade-in {
+    from {opacity: 0};
+    to {opacity: 1};
+}
+
+.experience-entry-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    animation-name: fade-in;
+    animation-duration: 1s;
+}
+
+.experience-entry-desc-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.experience-entry-company-name {
+    font-size: var(--font-medium);
+    font-weight: bold;
+}
+
+.experience-entry-position {
+    font-size: var(--font-medium);
+}
+
+.experience-entry-summary {
+    margin: 0px 32px;
+    text-align: justify;
+    font-size: var(--font-medium);
+}
+
+.experience-entry-tech-used-title {
+    font-size: var(--font-medium);
+}
+
+.experience-entry-tech-used-list {
+    list-style-type: square;
+}
+
+.experience-entry-tech-used {
+    font-size: var(--font-medium);
+    color: var(--foreground);
+}
+
+.experience-entry-media {
+    display: flex;
+    height: 60vh;
+    justify-content: center;
+    align-items: center;
+}

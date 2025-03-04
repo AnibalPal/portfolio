@@ -15,11 +15,11 @@ const Home = () => {
             hovering: false,
             focused: false
         },
-        proyects: {
+        experience: {
             hovering: false,
             focused: false
         },
-        experience: {
+        proyects: {
             hovering: false,
             focused: false
         },
@@ -41,14 +41,14 @@ const Home = () => {
                     selected={selected}
                 />
                 <RouteOption
-                    name={t("proyects.name")}
-                    route="proyects"
+                    name={t("experience.name")}
+                    route="experience"
                     handleChange={handleChange}
                     selected={selected}
                 />
                 <RouteOption
-                    name={t("experience.name")}
-                    route="experience"
+                    name={t("proyects.name")}
+                    route="proyects"
                     handleChange={handleChange}
                     selected={selected}
                 />

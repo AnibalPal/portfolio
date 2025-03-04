@@ -5,6 +5,12 @@
     margin: 16px;
 }
 
+.navbar-author {
+    font-size: var(--font-large);
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
 .navbar-links-container {
     display: flex;
     flex-direction: row;

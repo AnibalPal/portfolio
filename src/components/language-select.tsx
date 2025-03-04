@@ -16,6 +16,7 @@ const LanguageSelect = () => {
             <select
                 className="language-select-container"
                 defaultValue={i18n.language}
+                onKeyDown={(e) => { e.preventDefault() }} // Remove default key up / down behavior
                 onChange={(e) => { i18n.changeLanguage(e.target.value) }}
             >
                 {

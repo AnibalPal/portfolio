@@ -32,12 +32,12 @@ const Navbar = () => {
 
     return (
         <div className="navbar-base-container">
-            <p className="large">Anibal Palomo</p>
+            <p className="navbar-author">Anibal Palomo</p>
             <div className="navbar-links-container">
                 <NavLink to={"/home"} className={"navbar-link"}>{t("home.name")}</NavLink>
                 <NavLink to={"/about"} className={"navbar-link"}>{t("about.name")}</NavLink>
-                <NavLink to={"/proyects"} className={"navbar-link"}>{t("proyects.name")}</NavLink>
                 <NavLink to={"/experience"} className={"navbar-link"}>{t("experience.name")}</NavLink>
+                <NavLink to={"/proyects"} className={"navbar-link"}>{t("proyects.name")}</NavLink>
             </div>
             <div className="navbar-settings-container">
                 <div className="navbar-lang-switcher">

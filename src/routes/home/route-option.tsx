@@ -19,7 +19,7 @@ const RouteOption = ({ name, route, handleChange, selected }: RouteOptionProps) 
     const optionSelected = selected[route].focused || selected[route].hovering;
 
     const handleKeyDown = (key: string) => {
-        if (key === "Enter") {
+        if (key === "Enter" || key === " ") {
             navigate("/" + route)
         }
     }

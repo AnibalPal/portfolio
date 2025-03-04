@@ -23,3 +23,8 @@ p.large {
   width: 0px;
   height: 0px;
 }
+
+.go-back {
+  margin: 0px 32px;
+  align-self: end;
+}
