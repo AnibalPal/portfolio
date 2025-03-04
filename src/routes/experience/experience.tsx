@@ -22,7 +22,7 @@ interface IExperienceEntry {
 
 const Experience = () => {
 
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     const navigate = useNavigate();
 
@@ -80,7 +80,7 @@ const Experience = () => {
                 media: ""
             }
         ]
-    }, [])
+    }, [i18n.language])
 
     const dates = useMemo(() => {
         return experiences.map((experience) => {

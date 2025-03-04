@@ -17,6 +17,7 @@ const enTranslations = {
     experience: {
         name: "Experience",
         title: "Experience",
+        techUsedTitle: "Technologies and tools",
         exp1position: "Fullstack Developer - Full time",
         exp1summary: "A subsidiary of myFutureAI, in this startup I mostly worked on the NirvanaAI web app, the app is similar to chatgpt but with added capabilities like multiple file management while chatting with the AI. I designed several UI components, made the chat system, amongst other things",
         exp2position: "Fullstack Developer - Freelancer",

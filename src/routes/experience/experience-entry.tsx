@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import "./experience-entry.css";
 
 import noMediaImg from "../../assets/images/not-found.jpg";
@@ -11,6 +13,9 @@ interface ExperienceEntryProps {
 }
 
 const ExperienceEntry = ({ company_name, position, summary, tech_used, media }: ExperienceEntryProps) => {
+
+    const { t } = useTranslation();
+
     return (
         <div className="experience-entry-container">
             <div className="experience-entry-desc-container">
@@ -26,7 +31,7 @@ const ExperienceEntry = ({ company_name, position, summary, tech_used, media }: 
                     {summary}
                 </p>
                 <div>
-                    <p className="experience-entry-tech-used-title">Technologies and tools</p>
+                    <p className="experience-entry-tech-used-title">{t("experience.techUsedTitle")}</p>
                     <ul className="experience-entry-tech-used-list">
                         {
                             tech_used.map((tech: string, idx: number) => {
@@ -40,9 +45,9 @@ const ExperienceEntry = ({ company_name, position, summary, tech_used, media }: 
             </div>
             <div className="experience-entry-media">
                 {media ?
-                    <img width={800} height={550} src={media} /> 
+                    <img width={800} height={550} src={media} />
                     :
-                    <img width={800} height={550} src={noMediaImg} /> 
+                    <img width={800} height={550} src={noMediaImg} />
                 }
             </div>
         </div>
