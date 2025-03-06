@@ -4,15 +4,18 @@ const esTranslations = {
     },
     home: {
         name: "Inicio",
-        title: "Página de inicio"
-    },
-    about: {
-        name: "Sobre mi",
-        title: "Página sobre mi"
+        title: "Página de inicio",
+        about: "Sobre mi",
+        aboutDescP1: "Desarrollador de software con mas de dos años de experiencia en el sector. Tengo experiencia en tecnologias web tales como html, css, javascript y typescript, para desarrollo backend generalmente utilizo Python.",
+        aboutDescP2: "Te invito a revisar mis proyectos y experiencia de trabajo.",
     },
     proyects: {
         name: "Proyectos",
-        title: "Página proyectos"
+        title: "Página proyectos",
+        webDevelopment: "Desarrollo web",
+        gameDevelopment: "Desarrollo videojuegos",
+        playGame: "Jugar",
+        tryDemo: "Probar demo"
     },
     experience: {
         name: "Experiencia",

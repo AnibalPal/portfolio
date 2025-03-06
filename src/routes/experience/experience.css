@@ -1,28 +1,3 @@
-.experience-container {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    margin: 0px 32px;
-}
-
-.experience-title-container {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.experience-title {
-    font-size: var(--font-large);
-}
-
-.experience-title-underline {
-    width: calc(100vw - 96px);
-    border-bottom: solid;
-    border-width: 1px;
-    border-color: var(--foreground);
-    align-self: center;
-}
-
 .experience-content-container {
     display: flex;
     flex-direction: column;

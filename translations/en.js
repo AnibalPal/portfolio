@@ -4,15 +4,18 @@ const enTranslations = {
     },
     home: {
         name: "Home",
-        title: "Home page"
-    },
-    about: {
-        name: "About",
-        title: "About me page"
+        title: "Home page",
+        about: "About",
+        aboutDescP1: "Software developer with over 2 years of experience in the field. I have experience in web development technologies such as html, css, javascript and typescript, for backend development I mostly use Python.",
+        aboutDescP2: "Feel free to check my proyects and past work experience."
     },
     proyects: {
         name: "Proyects",
-        title: "Proyects page"
+        title: "Proyects page",
+        webDevelopment: "Web development",
+        gameDevelopment: "Game development",
+        playGame: "Play game",
+        tryDemo: "Try demo"
     },
     experience: {
         name: "Experience",

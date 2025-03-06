@@ -1,0 +1,15 @@
+.proyects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.proyect-type-container {
+    margin: 16px;
+}
+
+.proyect-list {
+    display: flex;
+    gap: 16px;
+    margin: 32px;
+}

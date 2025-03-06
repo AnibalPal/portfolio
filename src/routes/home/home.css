@@ -1,9 +1,38 @@
+.home-main-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
 .home-container {
     display: flex;
     flex-grow: 1;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: var(--background);
+}
+
+.home-about-me-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 128px;
+    font-size: var(--font-medium);
+}
+
+.home-about-me-img {
+    width: 200px;
+    height: 200px;
+}
+
+.home-about-me-title {
+    margin: 32px 0px 0px 32px;
+    font-size: var(--font-large);
+}
+
+.home-about-me-content {
+    margin: 32px;
+    font-size: var(--font-medium);
 }
 
 .home-options-container {

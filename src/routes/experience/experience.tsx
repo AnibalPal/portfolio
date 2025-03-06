@@ -10,7 +10,6 @@ import "./experience.css";
 import nirvanaImage from "../../assets/images/NirvanaAI-1.png";
 
 interface IExperienceEntry {
-    key: string,
     start_date: string,
     end_date: string,
     company_name: string,
@@ -31,7 +30,6 @@ const Experience = () => {
     const experiences = useMemo<IExperienceEntry[]>(() => {
         return [
             {
-                key: "exp1",
                 start_date: "04/01/24",
                 end_date: "10/13/24",
                 company_name: "NirvanaAI",
@@ -50,7 +48,6 @@ const Experience = () => {
                 media: nirvanaImage
             },
             {
-                key: "exp2",
                 start_date: "02/01/22",
                 end_date: "10/13/24",
                 company_name: "MyFutureAI",
@@ -60,7 +57,6 @@ const Experience = () => {
                 media: ""
             },
             {
-                key: "exp3",
                 start_date: "01/01/20",
                 end_date: "03/01/20",
                 company_name: t("experience.exp3company"),
@@ -70,7 +66,6 @@ const Experience = () => {
                 media: ""
             },
             {
-                key: "exp4",
                 start_date: "06/01/20",
                 end_date: "12/01/20",
                 company_name: t("experience.exp4company"),
@@ -129,10 +124,10 @@ const Experience = () => {
     }, [])
 
     return (
-        <div className="experience-container">
-            <div className="experience-title-container">
-                <p className="experience-title">{t("experience.title")}</p>
-                <div className="experience-title-underline" />
+        <div className="page-container">
+            <div className="page-title-container">
+                <p className="page-title">{t("experience.title")}</p>
+                <div className="page-title-underline" />
             </div>
             <div className="experience-content-container">
                 <Timeline

@@ -1,0 +1,22 @@
+.proyect-card-overlay-links {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 200px;
+    bottom: 23px;
+    gap: 8px;
+}
+
+.proyect-card-image {
+    width: 300px;
+    height: 200px;
+}
+
+.proyect-card-image-hover {
+    transition: all 0.2s;
+    opacity: 0.2;
+}
+

@@ -1,3 +1,17 @@
+/* Animations */
+
+@keyframes fade-in {
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+/* Classes */
+
 .app-container {
   display: flex;
   flex-direction: column;
@@ -27,4 +41,38 @@ p.large {
 .go-back {
   margin: 0px 32px;
   align-self: end;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: 0px 32px;
+  animation-name: fade-in;
+  animation-duration: 1s;
+}
+
+.page-title-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.page-title {
+  font-size: var(--font-large);
+}
+
+.page-title-underline {
+  width: calc(100vw - 96px);
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: var(--foreground);
+  align-self: center;
+}
+
+/* Animation only classes */
+
+.fade-in {
+  animation-name: fade-in;
+  animation-duration: 1s;
 }
