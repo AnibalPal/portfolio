@@ -36,6 +36,39 @@
     width: 200px;
 }
 
+.navbar-theme-switcher {
+    cursor: pointer;
+}
+
+.navbar-base-container-mobile {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%
+}
+
+.navbar-content-container-mobile {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.navbar-subtitle {
+    font-size: 24px;
+    margin-left: 16px;
+}
+
+.navbar-hamburger-container-mobile {
+    cursor: pointer;
+}
+
+.navbar-settings-relative-container-mobile {
+    position: relative;
+    top: 10px;
+    right: 176px;
+}
+
 .navbar-settings-container-mobile {
     padding: 16px;
     width: fit-content;
@@ -46,8 +79,4 @@
     border: solid;
     border-color: var(--foreground);
     background-color: var(--background);
-}
-
-.navbar-theme-switcher {
-    cursor: pointer;
 }

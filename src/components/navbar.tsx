@@ -29,6 +29,11 @@ const Navbar = () => {
         }
     }
 
+    const handleOpenSettingsMobile = (e: React.MouseEvent<HTMLDivElement>) => {
+        e.stopPropagation();
+        setOptionsOpen(true);
+    }
+
     useEffect(() => {
         if (localStorage.getItem("theme") === "light") {
             document.documentElement.setAttribute("data-theme", "light");
@@ -52,22 +57,26 @@ const Navbar = () => {
         <div className="navbar-base-container">
             {
                 deviceType === "mobile" ?
-                    <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", width: "100%" }}>
-                        <div style={{ display: "flex", flexDirection: "column", flexGrow: 1 }}>
+                    <div className="navbar-base-container-mobile">
+                        <div className="navbar-content-container-mobile">
                             <p className="navbar-author">Anibal Palomo</p>
-                            <p style={{ fontSize: "24px", marginLeft: "16px" }}>Software developer</p>
+                            <p className="navbar-subtitle">{t("home.subtitle")}</p>
                         </div>
-                        <div style={{ cursor: "pointer" }} onClick={(e) => { e.stopPropagation(); setOptionsOpen(true) }}>
+                        <div className="navbar-hamburger-container-mobile" onClick={handleOpenSettingsMobile}>
                             <HamburgerIcon />
                             {
                                 optionsOpen &&
                                 <div className="anchor">
-                                    <div style={{ position: "relative", top: "10px", right: "176px" }}>
+                                    <div className="navbar-settings-relative-container-mobile">
                                         <div className="navbar-settings-container-mobile">
                                             <div className="navbar-lang-switcher">
                                                 <LanguageSelect />
                                             </div>
-                                            <div className="navbar-theme-switcher" title="Change theme" onClick={changeTheme}>
+                                            <div
+                                                className="navbar-theme-switcher"
+                                                title="Change theme"
+                                                onClick={changeTheme}
+                                            >
                                                 <SunIcon />
                                             </div>
                                         </div>
