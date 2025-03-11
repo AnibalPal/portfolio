@@ -36,6 +36,18 @@
     width: 200px;
 }
 
+.navbar-settings-container-mobile {
+    padding: 16px;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    border: solid;
+    border-color: var(--foreground);
+    background-color: var(--background);
+}
+
 .navbar-theme-switcher {
     cursor: pointer;
 }

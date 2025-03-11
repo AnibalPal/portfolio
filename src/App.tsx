@@ -4,8 +4,14 @@ import "../i18n"
 
 import { useEffect } from 'react';
 import Navbar from './components/navbar';
+import { useMediaQuery } from 'react-responsive';
+import { DeviceInfoContext } from './contexts/deviceInfo';
 
 function App() {
+
+  const deviceType = useMediaQuery({
+    query: '(max-width: 400px)'
+  }) ? "mobile" : "desktop";
 
   const { pathname } = useLocation();
 
@@ -18,10 +24,12 @@ function App() {
   }, [])
 
   return (
-    <div className='app-container'>
-      <Navbar />
-      <Outlet />
-    </div>
+    <DeviceInfoContext value={deviceType}>
+      <div className='app-container'>
+        <Navbar />
+        <Outlet />
+      </div>
+    </DeviceInfoContext>
   )
 }
 

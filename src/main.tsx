@@ -10,17 +10,20 @@ import Experience from './routes/experience/experience.tsx'
 
 import './index.css'
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <HashRouter>
-      <Routes>
-        <Route path='/' element={<App />} >
-          <Route path='home' element={<Home />} />
-          <Route path='about' element={<About />} />
-          <Route path='proyects' element={<Proyects />} />
-          <Route path='experience' element={<Experience />} />
-        </Route>
-      </Routes>
-    </HashRouter>
+const makeRoot = () => {
+  
+  return <StrictMode>
+      <HashRouter>
+        <Routes>
+          <Route path='/' element={<App />} >
+            <Route path='home' element={<Home />} />
+            <Route path='about' element={<About />} />
+            <Route path='proyects' element={<Proyects />} />
+            <Route path='experience' element={<Experience />} />
+          </Route>
+        </Routes>
+      </HashRouter>
   </StrictMode>
-)
+}
+
+createRoot(document.getElementById('root')!).render(makeRoot())

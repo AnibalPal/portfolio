@@ -1,17 +1,15 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 import RouteOption from "./route-option";
 import { Selection, SelectOptions, StateOptions } from "./types";
 
 import "./home.css";
 import { useTranslation } from "react-i18next";
-import { useMediaQuery } from "react-responsive";
+import { DeviceInfoContext } from "../../contexts/deviceInfo";
 
 const Home = () => {
 
-    const isMobile = useMediaQuery({
-        query: '(max-width: 400px)'
-    });
+    const deviceType = useContext(DeviceInfoContext);
 
     const { t } = useTranslation();
 
@@ -31,7 +29,7 @@ const Home = () => {
     });
 
     const handleChange = (key: SelectOptions, state: StateOptions, value: boolean): void => {
-        console.log(isMobile)
+        console.log(deviceType)
         let newSelected = { ...selected };
         newSelected[key][state] = value;
         setSelected(newSelected);
@@ -40,7 +38,7 @@ const Home = () => {
     return (
         <div className="home-main-container fade-in">
             {
-                isMobile ?
+                deviceType === "mobile" ?
                     <p>Is mobile</p>
                     :
                     <>
