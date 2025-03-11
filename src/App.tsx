@@ -10,7 +10,7 @@ import { DeviceInfoContext } from './contexts/deviceInfo';
 function App() {
 
   const deviceType = useMediaQuery({
-    query: '(max-width: 400px)'
+    query: '(max-width: 900px)'
   }) ? "mobile" : "desktop";
 
   const { pathname } = useLocation();
