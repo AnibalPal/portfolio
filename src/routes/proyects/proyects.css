@@ -10,6 +10,7 @@
 
 .proyect-list {
     display: flex;
-    gap: 16px;
+    gap: 64px;
     margin: 32px;
+    overflow-x: auto;
 }
