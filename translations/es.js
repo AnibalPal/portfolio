@@ -23,7 +23,7 @@ const esTranslations = {
         title: "Experiencia",
         techUsedTitle: "Tecnologías y herramientas",
         exp1position: "Desarrollador Fullstack - Tiempo completo",
-        exp1summary: "Empresa subsidiaria de myFutureAI, en esta startup trabaje mayormente en la aplicación web 'NirvanaAI', la aplicación es similar a chatgpt pero con capacidades nuevas como manejo de archivos multiples mienntras se chatea con la inteligencia artificial. Diseñe muchos componentes de la interfaz de usuario, arme el sistema de chat en el frontend, entre otras cosas",
+        exp1summary: "En esta startup trabaje mayormente en la aplicación web 'NirvanaAI', la aplicación es similar a chatgpt pero con capacidades nuevas como manejo de archivos multiples mienntras se chatea con la inteligencia artificial. Diseñe muchos componentes de la interfaz de usuario, arme el sistema de chat en el frontend, entre otras cosas",
         exp2position: "Desarrollador Fullstack - Freelance",
         exp2summary: "Hice my práctica en esta empresa primero, luego me quede como desarrollador freelance. Algunas de las cosas que hice fueron desarrollar aplicaciones web que usas Inteligencia artificial como un editor de documentos, una extension de shopify, una landing page, etiquetado de datos, entre otras.",
         exp3company: "Universidad técnica Federico Santa María",

@@ -29,7 +29,10 @@
 
 .timeline-indicator-date {
     font-size: var(--font-small);
+    white-space: nowrap;
 }
+
+
 
 .timeline-indicator {
     width: 32px;
@@ -39,6 +42,13 @@
     border-color: var(--background);
     background-color: var(--foreground);
     rotate: 45deg;
+}
+
+@media (max-width: 900px) {
+    .timeline-indicator {
+        width: 16px;
+        height: 16px;
+    }
 }
 
 .timeline-indicator.active {
@@ -54,4 +64,9 @@
 
 .timeline-indicator.inactive:hover {
     transform: scale(1);
+}
+
+.timeline-arrow-mobile {
+    font-size: var(--font-small);
+    white-space: nowrap;
 }

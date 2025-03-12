@@ -62,6 +62,12 @@ p.large {
   font-size: var(--font-large);
 }
 
+@media (max-width: 900px) {
+  .page-title {
+    font-size: var(--font-medium);
+  }
+}
+
 .page-title-underline {
   width: calc(100vw - 96px);
   border-bottom: solid;

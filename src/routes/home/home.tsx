@@ -38,44 +38,40 @@ const Home = () => {
     return (
         <div className="home-main-container fade-in">
             {
-                deviceType === "mobile" ?
-                    <p>Is mobile</p>
-                    :
-                    <>
-                        <div className="home-about-me-container">
-                            <p className="home-about-me-title">
-                                {t("home.about")}
-                            </p>
-                            <p className="home-about-me-content">
-                                {t("home.aboutDescP1")}
-                                <br />
-                                {t("home.aboutDescP2")}
-                            </p>
-                        </div>
-                        <div className="home-container">
-                            <div className="home-options-container">
-                                {/* <RouteOption
+                deviceType === "desktop" &&
+                <div className="home-about-me-container">
+                    <p className="home-about-me-title">
+                        {t("home.about")}
+                    </p>
+                    <p className="home-about-me-content">
+                        {t("home.aboutDescP1")}
+                        <br />
+                        {t("home.aboutDescP2")}
+                    </p>
+                </div>
+            }
+            <div className="home-container">
+                <div className="home-options-container">
+                    {/* <RouteOption
                     name={t("about.name")}
                     route="about"
                     handleChange={handleChange}
                     selected={selected}
                 /> */}
-                                <RouteOption
-                                    name={t("experience.name")}
-                                    route="experience"
-                                    handleChange={handleChange}
-                                    selected={selected}
-                                />
-                                <RouteOption
-                                    name={t("proyects.name")}
-                                    route="proyects"
-                                    handleChange={handleChange}
-                                    selected={selected}
-                                />
-                            </div>
-                        </div>
-                    </>
-            }
+                    <RouteOption
+                        name={t("experience.name")}
+                        route="experience"
+                        handleChange={handleChange}
+                        selected={selected}
+                    />
+                    <RouteOption
+                        name={t("proyects.name")}
+                        route="proyects"
+                        handleChange={handleChange}
+                        selected={selected}
+                    />
+                </div>
+            </div>
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { NavLink, useNavigate } from "react-router";
 
@@ -12,6 +12,7 @@ import nirvanaImage from "../../assets/images/NirvanaAI-1.png";
 interface IExperienceEntry {
     start_date: string,
     end_date: string,
+    duration: string,
     company_name: string,
     position: string,
     summary: string,
@@ -32,6 +33,7 @@ const Experience = () => {
             {
                 start_date: "04/01/24",
                 end_date: "10/13/24",
+                duration: "6 months",
                 company_name: "NirvanaAI",
                 position: t("experience.exp1position"),
                 summary: t("experience.exp1summary"),
@@ -50,6 +52,7 @@ const Experience = () => {
             {
                 start_date: "02/01/22",
                 end_date: "10/13/24",
+                duration: "2+ years",
                 company_name: "MyFutureAI",
                 position: t("experience.exp2position"),
                 summary: t("experience.exp2summary"),
@@ -59,6 +62,7 @@ const Experience = () => {
             {
                 start_date: "01/01/20",
                 end_date: "03/01/20",
+                duration: "2 months",
                 company_name: t("experience.exp3company"),
                 position: t("experience.exp3position"),
                 summary: t("experience.exp3summary"),
@@ -68,6 +72,7 @@ const Experience = () => {
             {
                 start_date: "06/01/20",
                 end_date: "12/01/20",
+                duration: "6 months",
                 company_name: t("experience.exp4company"),
                 position: t("experience.exp4position"),
                 summary: t("experience.exp4summary"),
@@ -81,10 +86,33 @@ const Experience = () => {
         return experiences.map((experience) => {
             return {
                 start_date: experience.start_date,
-                end_date: experience.end_date
+                end_date: experience.end_date,
+                duration: experience.duration
             }
         })
     }, [])
+
+    const moveRight = useCallback(
+        () => {
+            setSelectedExperience((selectedExperience) => {
+                if (selectedExperience === experiences.length - 1) {
+                    return 0;
+                } else {
+                    return selectedExperience + 1
+                }
+            });
+        }, [])
+
+    const moveLeft = useCallback(
+        () => {
+            setSelectedExperience((selectedExperience) => {
+                if (selectedExperience === 0) {
+                    return experiences.length - 1;
+                } else {
+                    return selectedExperience - 1
+                }
+            });
+        }, [])
 
     useEffect(() => {
 
@@ -95,23 +123,11 @@ const Experience = () => {
             }
 
             if (ev.key === "ArrowRight" || ev.key === "d") {
-                setSelectedExperience((selectedExperience) => {
-                    if (selectedExperience === experiences.length - 1) {
-                        return 0;
-                    } else {
-                        return selectedExperience + 1
-                    }
-                });
+                moveRight();
             }
 
             if (ev.key === "ArrowLeft" || ev.key === "a") {
-                setSelectedExperience((selectedExperience) => {
-                    if (selectedExperience === 0) {
-                        return experiences.length - 1;
-                    } else {
-                        return selectedExperience - 1
-                    }
-                });
+                moveLeft();
             }
         };
 
@@ -134,6 +150,8 @@ const Experience = () => {
                     dates={dates}
                     selectedExperience={selectedExperience}
                     setExperience={setSelectedExperience}
+                    moveLeft={moveLeft}
+                    moveRight={moveRight}
                 />
                 <ExperienceEntry {...experiences[selectedExperience]} />
             </div>
