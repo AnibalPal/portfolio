@@ -10,6 +10,7 @@ import "./experience.css";
 import nirvanaImage from "../../assets/images/NirvanaAI-1.png";
 
 interface IExperienceEntry {
+    key: string | number,
     start_date: string,
     end_date: string,
     duration: string,
@@ -31,6 +32,7 @@ const Experience = () => {
     const experiences = useMemo<IExperienceEntry[]>(() => {
         return [
             {
+                key: "exp-0",
                 start_date: "04/01/24",
                 end_date: "10/13/24",
                 duration: "6 months",
@@ -50,6 +52,7 @@ const Experience = () => {
                 media: nirvanaImage
             },
             {
+                key: "exp-1",
                 start_date: "02/01/22",
                 end_date: "10/13/24",
                 duration: "2+ years",
@@ -60,6 +63,7 @@ const Experience = () => {
                 media: ""
             },
             {
+                key: "exp-2",
                 start_date: "01/01/20",
                 end_date: "03/01/20",
                 duration: "2 months",
@@ -70,6 +74,7 @@ const Experience = () => {
                 media: ""
             },
             {
+                key: "exp-3",
                 start_date: "06/01/20",
                 end_date: "12/01/20",
                 duration: "6 months",
