@@ -1,0 +1,46 @@
+.proyect-info-modal-container {
+    position: absolute;
+    
+    border: solid;
+    border-width: 4px;
+    border-radius: 6px;
+    border-color: var(--foreground);
+    
+    background-color: var(--background);
+    
+    width: 400px;
+    max-height: 500px;
+
+    padding: 16px;
+
+    /* Center modal */
+    transform: translate(-50%, 50%);
+    bottom: 50vh;
+    left: 50vw;
+}
+
+.proyect-card-modal-link {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.proyect-card-modal-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.proyect-card-modal-title {
+    font-size: var(--font-medium);
+}
+
+.proyect-card-modal-close {
+    font-size: var(--font-medium);
+    cursor: pointer;
+}
+
+.proyect-card-modal-desc {
+    text-align: justify;
+    font-size: var(--font-small);
+}

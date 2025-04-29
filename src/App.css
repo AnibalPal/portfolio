@@ -10,6 +10,26 @@
   }
 }
 
+@keyframes blur {
+  from {
+    filter: blur(0px);
+  }
+
+  to {
+    filter: blur(8px);
+  }
+}
+
+@keyframes blur-reverse {
+  from {
+    filter: blur(8px);
+  }
+
+  to {
+    filter: blur(0px);
+  }
+}
+
 /* Classes */
 
 .app-container {
@@ -81,4 +101,17 @@ p.large {
 .fade-in {
   animation-name: fade-in;
   animation-duration: 1s;
+}
+
+.blur-bg {
+  animation-name: blur;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+.unblur-bg {
+  /* Does not work using blur with reverse for some reason, had to create a blur reverse animation instead */
+  animation-name: blur-reverse;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
 }

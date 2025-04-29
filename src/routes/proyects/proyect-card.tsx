@@ -1,17 +1,21 @@
 import { useState } from "react";
 
+import { ProyectInfoModalProps } from "./types";
+
 import "./proyect-card.css";
 
 interface ProyectCardProps {
     src: string
     name: string
+    setOpenModal?: Function
     links: {
         name: string
-        href: string
+        href?: string
+        modalProps?: null | ProyectInfoModalProps
     }[]
 }
 
-const ProyectCard = ({ src, name, links }: ProyectCardProps) => {
+const ProyectCard = ({ src, name, setOpenModal, links }: ProyectCardProps) => {
 
     const [hovering, setHovering] = useState(false);
 
@@ -32,7 +36,23 @@ const ProyectCard = ({ src, name, links }: ProyectCardProps) => {
                 <div className="anchor">
                     <div className="proyect-card-overlay-links">
                         {links.map((link, idx) => {
-                            return <a key={"proyect-link-" + idx} href={link.href} target="_blank">{link.name}</a>
+                            if (link.modalProps) {
+                                // Desc link is a link that opens a modal with a description
+                                return (
+                                    <p
+                                        className="proyect-card-modal-link"
+                                        onClick={(e) => {
+                                            if (setOpenModal) {
+                                                e.stopPropagation();
+                                                setOpenModal(link.modalProps);
+                                            }
+                                        }}>
+                                        {link.name}
+                                    </p>
+                                )
+                            } else {
+                                return <a key={"proyect-link-" + idx} href={link.href} target="_blank">{link.name}</a>
+                            }
                         })}
                     </div>
                 </div>

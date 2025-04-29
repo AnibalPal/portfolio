@@ -50,7 +50,6 @@ const Navbar = () => {
         return () => {
             document.removeEventListener("click", handleClickOutside);
         }
-
     }, [])
 
     return (
