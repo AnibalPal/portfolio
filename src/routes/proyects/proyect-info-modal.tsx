@@ -15,11 +15,11 @@ const ProyectInfoModal = () => {
     return (
         <div className="anchor" onClick={(e) => e.stopPropagation()}>
             <div className="proyect-info-modal-container">
-                <div className="proyect-card-modal-title-container">
-                    <p className="proyect-card-modal-title">{modalState.infoModalTitle}</p>
-                    <p onClick={handleModalClose} className="proyect-card-modal-close">X</p>
+                <div className="proyect-info-modal-title-container">
+                    <p className="proyect-info-modal-title">{modalState.infoModalTitle}</p>
+                    <p onClick={handleModalClose} className="proyect-info-modal-close">X</p>
                 </div>
-                <p className="proyect-card-modal-desc">{modalState.infoModalDesc}</p>
+                <p className="proyect-info-modal-desc">{modalState.infoModalDesc}</p>
             </div>
         </div>
     )

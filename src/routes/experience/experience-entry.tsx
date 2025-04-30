@@ -43,11 +43,11 @@ const ExperienceEntry = ({ company_name, position, summary, tech_used, media }: 
                     </ul>
                 </div>
             </div>
-            <div className="experience-entry-media">
+            <div className="experience-entry-media-container">
                 {media ?
-                    <img style={{ width: "inherit" }} src={media} />
+                    <img className="experience-entry-media" src={media} />
                     :
-                    <img style={{ width: "inherit" }} src={noMediaImg} />
+                    <img className="experience-entry-media-no-image" src={noMediaImg} />
                 }
             </div>
         </div>

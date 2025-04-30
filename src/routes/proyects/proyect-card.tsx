@@ -50,7 +50,7 @@ const ProyectCard = ({ src, name, links }: ProyectCardProps) => {
                                     </p>
                                 )
                             } else {
-                                return <a key={"proyect-link-" + idx} href={link.href} target="_blank">{link.name}</a>
+                                return <a className="proyect-card-modal-link" key={"proyect-link-" + idx} href={link.href} target="_blank">{link.name}</a>
                             }
                         })}
                     </div>

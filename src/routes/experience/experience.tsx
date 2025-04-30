@@ -8,6 +8,9 @@ import ExperienceEntry from "./experience-entry";
 import "./experience.css";
 
 import nirvanaImage from "../../assets/images/NirvanaAI-1.png";
+import myfutureImage from "../../assets/images/myfuture.webp";
+import usmImage from "../../assets/images/escudo-usm.png";
+import usizePhone from "../../assets/images/usize_phone.png";
 
 interface IExperienceEntry {
     key: string | number,
@@ -60,7 +63,7 @@ const Experience = () => {
                 position: t("experience.exp2position"),
                 summary: t("experience.exp2summary"),
                 tech_used: ["Javascript", "Python", "MySql", "ReactJs", "Node", "Clickup", "Amazon web services", "Git"],
-                media: ""
+                media: myfutureImage
             },
             {
                 key: "exp-2",
@@ -71,7 +74,7 @@ const Experience = () => {
                 position: t("experience.exp3position"),
                 summary: t("experience.exp3summary"),
                 tech_used: ["Python", "numpy", "PyQt", "Matlab"],
-                media: ""
+                media: usmImage
             },
             {
                 key: "exp-3",
@@ -82,7 +85,7 @@ const Experience = () => {
                 position: t("experience.exp4position"),
                 summary: t("experience.exp4summary"),
                 tech_used: ["Python", "Tensorflow", "Convolutional neural networks", "Javascript", "React-native", "Git"],
-                media: ""
+                media: usizePhone
             }
         ]
     }, [i18n.language])

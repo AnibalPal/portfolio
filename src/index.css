@@ -34,6 +34,9 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  scrollbar-color: var(--foreground) #00000000;
+  scrollbar-width: thin;
 }
 
 .stack {

@@ -19,28 +19,23 @@
     left: 50vw;
 }
 
-.proyect-card-modal-link {
-    cursor: pointer;
-    text-decoration: underline;
-}
-
-.proyect-card-modal-title-container {
+.proyect-info-modal-title-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 16px;
 }
 
-.proyect-card-modal-title {
+.proyect-info-modal-title {
     font-size: var(--font-medium);
 }
 
-.proyect-card-modal-close {
+.proyect-info-modal-close {
     font-size: var(--font-medium);
     cursor: pointer;
 }
 
-.proyect-card-modal-desc {
+.proyect-info-modal-desc {
     text-align: justify;
     font-size: var(--font-small);
 }

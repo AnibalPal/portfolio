@@ -20,3 +20,8 @@
     opacity: 0.2;
 }
 
+.proyect-card-modal-link {
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: var(--font-medium);
+}
