@@ -1,6 +1,6 @@
 const enTranslations = {
     common: {
-        goBackAction: "Go back"
+        goBackAction: "Go back",
     },
     home: {
         name: "Home",
@@ -16,7 +16,9 @@ const enTranslations = {
         webDevelopment: "Web development",
         gameDevelopment: "Game development",
         playGame: "Play game",
-        tryDemo: "Try demo"
+        information: "Information",
+        tryDemo: "Try demo",
+        huasoventurasDesc: "Videogame developed for the LAGS (Latin American Games Showcase) game jam, the event is about developing a videogame in 9 days with a 'theme' that must be added to the game in some form. We were a team of 2 people, and we got 6th place by other developer's votes."
     },
     experience: {
         name: "Experience",

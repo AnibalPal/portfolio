@@ -52,11 +52,11 @@ const Proyects = () => {
                             href: "https://apg-games.itch.io/huasoventuras"
                         },
                         {
-                            name: "Info",
+                            name: t("proyects.information"),
                             modalProps: {
                                 infoModalOpen: true,
                                 infoModalTitle: "Huasoventuras",
-                                infoModalDesc: "Proyecto realizado para la LAGS (Latin American Games Showcase) game jam, esta experiencia consiste en la creación de un videojuego en 9 días siguiendo algun tema en concreto. Fuimos dos personas en este proyecto y obtuvimos 6to lugar por votación popular."
+                                infoModalDesc: t("proyects.huasoventurasDesc")
                             }
                         }
                     ]
