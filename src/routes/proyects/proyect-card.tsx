@@ -1,22 +1,23 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 
-import { ProyectInfoModalProps } from "./types";
+import { IProyectsState, ProyectsContext } from "./proyects-context";
 
 import "./proyect-card.css";
 
 interface ProyectCardProps {
     src: string
     name: string
-    setOpenModal?: Function
     links: {
         name: string
         href?: string
-        modalProps?: null | ProyectInfoModalProps
+        modalProps?: IProyectsState
     }[]
 }
 
-const ProyectCard = ({ src, name, setOpenModal, links }: ProyectCardProps) => {
+const ProyectCard = ({ src, name, links }: ProyectCardProps) => {
 
+    const { modalReducer } = useContext(ProyectsContext);
+    
     const [hovering, setHovering] = useState(false);
 
     return (
@@ -42,10 +43,8 @@ const ProyectCard = ({ src, name, setOpenModal, links }: ProyectCardProps) => {
                                     <p
                                         className="proyect-card-modal-link"
                                         onClick={(e) => {
-                                            if (setOpenModal) {
-                                                e.stopPropagation();
-                                                setOpenModal(link.modalProps);
-                                            }
+                                            e.stopPropagation();
+                                            modalReducer("all", link.modalProps);
                                         }}>
                                         {link.name}
                                     </p>

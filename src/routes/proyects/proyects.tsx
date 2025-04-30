@@ -1,17 +1,16 @@
-import { useState, useEffect, useMemo } from "react";
+import { useEffect, useMemo, useContext } from "react";
 import { useTranslation } from "react-i18next";
 import { NavLink, useNavigate } from "react-router";
 
 import ProyectCard from "./proyect-card";
 import ProyectInfoModal from "./proyect-info-modal";
 
-import { ProyectInfoModalProps } from "./types";
-
 import HuasoventurasImage from "../../assets/images/huasoventuras_thumbnail.png";
 import FlappyBirdSpaceImage from "../../assets/images/flappy_bird_space.png";
 import EtchASketch from "../../assets/images/etch-a-sketch.png";
 
 import "./proyects.css";
+import { ProyectsContext } from "./proyects-context";
 
 const Proyects = () => {
 
@@ -19,7 +18,7 @@ const Proyects = () => {
 
     const { t, i18n } = useTranslation();
 
-    const [proyectInfoModalText, setProyectInfoModalText] = useState<null | ProyectInfoModalProps>(null);
+    const { modalState, modalReducer } = useContext(ProyectsContext);
 
     const webDevelopmentProyects = useMemo(() => {
         return [
@@ -46,7 +45,6 @@ const Proyects = () => {
             {
                 name: "Huasoventuras",
                 src: HuasoventurasImage,
-                setOpenModal: setProyectInfoModalText,
                 links:
                     [
                         {
@@ -56,8 +54,9 @@ const Proyects = () => {
                         {
                             name: "Info",
                             modalProps: {
-                                title: "Huasoventuras",
-                                text: "Proyecto realizado para la LAGS (Latin American Games Showcase) game jam, esta experiencia consiste en la creación de un videojuego en 9 días siguiendo algun tema en concreto. Fuimos dos personas en este proyecto y obtuvimos 6to lugar por votación popular."
+                                infoModalOpen: true,
+                                infoModalTitle: "Huasoventuras",
+                                infoModalDesc: "Proyecto realizado para la LAGS (Latin American Games Showcase) game jam, esta experiencia consiste en la creación de un videojuego en 9 días siguiendo algun tema en concreto. Fuimos dos personas en este proyecto y obtuvimos 6to lugar por votación popular."
                             }
                         }
                     ]
@@ -81,12 +80,16 @@ const Proyects = () => {
 
         const handleKeyboardActions = (ev: KeyboardEvent) => {
             if (ev.key === "Escape") {
-                navigate("/home");
+                if (modalState.infoModalOpen) {
+                    modalReducer("open", false);
+                } else {
+                    navigate("/home");
+                }
             }
         };
 
         const handleClickOutside = () => {
-            setProyectInfoModalText(null);
+            modalReducer("open", false);
         }
 
         document.addEventListener("keydown", handleKeyboardActions);
@@ -97,18 +100,18 @@ const Proyects = () => {
             document.removeEventListener("click", handleClickOutside);
         })
 
-    }, [])
+    }, [modalState.infoModalOpen])
 
     return (
         <>
             <div className={"page-container"}>
                 {/* NOTE: had to add all blur effects on each component instead of the base component in order to have
                  the blur effect and the fade in on page load */}
-                <div className={"page-title-container " + (proyectInfoModalText ? "blur-bg" : "unblur-bg")}>
+                <div className={"page-title-container " + (modalState.infoModalOpen ? "blur-bg" : "unblur-bg")}>
                     <p className="page-title">{t("proyects.name")}</p>
                     <div className="page-title-underline" />
                 </div>
-                <div className={"proyects-container " + (proyectInfoModalText ? "blur-bg" : "unblur-bg")}>
+                <div className={"proyects-container " + (modalState.infoModalOpen ? "blur-bg" : "unblur-bg")}>
                     <div className="proyect-type-container">
                         <p className="medium">{t("proyects.webDevelopment")}</p>
                         <div className="proyect-list">
@@ -138,12 +141,12 @@ const Proyects = () => {
                         </div>
                     </div>
                 </div>
-                <NavLink className={"go-back " + (proyectInfoModalText ? "blur-bg" : "unblur-bg")} to="/home">
+                <NavLink className={"go-back " + (modalState.infoModalOpen ? "blur-bg" : "unblur-bg")} to="/home">
                     {t("common.goBackAction")}
                 </NavLink>
             </div>
-            {proyectInfoModalText &&
-                <ProyectInfoModal {...proyectInfoModalText}/>
+            {modalState.infoModalOpen &&
+                <ProyectInfoModal />
             }
         </>
     )
