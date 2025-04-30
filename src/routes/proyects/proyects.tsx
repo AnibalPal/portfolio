@@ -75,6 +75,27 @@ const Proyects = () => {
         ]
     }, [i18n.language])
 
+    // Might add some college proyects
+    // const otherApps = useMemo(() => {
+    //     return [
+    //         {
+    //             name: "Reinforcement Learning in Fighting games",
+    //             src: HuasoventurasImage,
+    //             links:
+    //                 [
+    //                     {
+    //                         name: t("proyects.information"),
+    //                         modalProps: {
+    //                             infoModalOpen: true,
+    //                             infoModalTitle: "Reinforcement Learning in Fighting games",
+    //                             infoModalDesc: "My undergraduate thesis proyect, I used pytorch to apply a reinforcement type agent to a fighting videogame to research how would that agent handle that environment."
+    //                         }
+    //                     }
+    //                 ]
+    //         },
+    //     ]
+    // }, [])
+
     // Set effect listeners
     useEffect(() => {
 
