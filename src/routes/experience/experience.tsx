@@ -7,6 +7,7 @@ import ExperienceEntry from "./experience-entry";
 
 import "./experience.css";
 
+import arcadiImage from "../../assets/images/Arcadi.png";
 import nirvanaImage from "../../assets/images/NirvanaAI-1.png";
 import myfutureImage from "../../assets/images/myfuture.webp";
 import usmImage from "../../assets/images/escudo-usm.png";
@@ -36,6 +37,28 @@ const Experience = () => {
         return [
             {
                 key: "exp-0",
+                start_date: "06/01/25",
+                end_date: "12/1/25",
+                duration: "6 months",
+                company_name: "ArcadiSpa",
+                position: t("experience.expArcadiPosition"),
+                summary: t("experience.expArcadiSummary"),
+                tech_used: [
+                    "Javascript",
+                    "Python",
+                    "Ruby on Rails",
+                    "VueJs",
+                    "Amazon web services",
+                    "Heroku",
+                    "MySql",
+                    "Git",
+                    "Figma",
+                    "Trello"
+                ],
+                media: arcadiImage
+            },
+            {
+                key: "exp-1",
                 start_date: "04/01/24",
                 end_date: "10/13/24",
                 duration: "6 months",
@@ -55,7 +78,7 @@ const Experience = () => {
                 media: nirvanaImage
             },
             {
-                key: "exp-1",
+                key: "exp-2",
                 start_date: "02/01/22",
                 end_date: "10/13/24",
                 duration: "2+ years",
@@ -66,7 +89,7 @@ const Experience = () => {
                 media: myfutureImage
             },
             {
-                key: "exp-2",
+                key: "exp-3",
                 start_date: "01/01/20",
                 end_date: "03/01/20",
                 duration: "2 months",
@@ -77,7 +100,7 @@ const Experience = () => {
                 media: usmImage
             },
             {
-                key: "exp-3",
+                key: "exp-4",
                 start_date: "06/01/20",
                 end_date: "12/01/20",
                 duration: "6 months",
