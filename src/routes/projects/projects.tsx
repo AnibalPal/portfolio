@@ -5,6 +5,7 @@ import { NavLink, useNavigate } from "react-router";
 import ProjectCard from "./project-card";
 import ProjectInfoModal from "./project-info-modal";
 
+import LaUltimaSopaipillaImage from "../../assets/images/la_ultima_sopaipialla_thumbnail.png";
 import HuasoventurasImage from "../../assets/images/huasoventuras_thumbnail.png";
 import FlappyBirdSpaceImage from "../../assets/images/flappy_bird_space.png";
 import EtchASketch from "../../assets/images/etch-a-sketch.png";
@@ -42,6 +43,25 @@ const Projects = () => {
 
     const gameDevelopmentProjects = useMemo(() => {
         return [
+            {
+                name: "La última sopaipilla",
+                src: LaUltimaSopaipillaImage,
+                links:
+                    [
+                        {
+                            name: t("projects.playGame"),
+                            href: "https://apg-games.itch.io/la-ultima-sopaipilla"
+                        },
+                        {
+                            name: t("projects.information"),
+                            modalProps: {
+                                infoModalOpen: true,
+                                infoModalTitle: "La última sopaipilla",
+                                infoModalDesc: t("projects.laultimasopaipillaDesc")
+                            }
+                        }
+                    ]
+            },
             {
                 name: "Huasoventuras",
                 src: HuasoventurasImage,

@@ -20,7 +20,8 @@ const enTranslations = {
         playGame: "Play game",
         information: "Information",
         tryDemo: "Try demo",
-        huasoventurasDesc: "Videogame developed for the LAGS (Latin American Games Showcase) game jam, the event is about developing a videogame in 9 days with a 'theme' that must be added to the game in some form. We were a team of 2 people, and we got 6th place by other contestants' votes."
+        huasoventurasDesc: "Videogame developed for the LAGS (Latin American Games Showcase) game jam 2025 edition, the event is about developing a videogame in 9 days with a 'theme' that must be added to the game in some form. We were a team of 2 people, and we got 6th place by other contestants' votes.",
+        laultimasopaipillaDesc: "Videogame developed for the LAGS (Latin American Games Showcase) game jam 2026 edition, the event is about developing a videogame in 9 days with a 'theme' that must be added to the game in some form. We were a team of 5 people, I was the programmer and the rest were artists and musicians. We got top 25 result from over 100 entries."
     },
     experience: {
         name: "Experience",
