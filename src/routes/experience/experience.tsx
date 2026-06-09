@@ -39,7 +39,7 @@ const Experience = () => {
                 key: "exp-0",
                 start_date: "06/01/25",
                 end_date: "12/1/25",
-                duration: "6 months",
+                duration: "6 " + t("common.months"),
                 company_name: "ArcadiSpa",
                 position: t("experience.expArcadiPosition"),
                 summary: t("experience.expArcadiSummary"),
@@ -61,7 +61,7 @@ const Experience = () => {
                 key: "exp-1",
                 start_date: "04/01/24",
                 end_date: "10/13/24",
-                duration: "6 months",
+                duration: "6 " + t("common.months"),
                 company_name: "NirvanaAI",
                 position: t("experience.exp1position"),
                 summary: t("experience.exp1summary"),
@@ -81,7 +81,7 @@ const Experience = () => {
                 key: "exp-2",
                 start_date: "02/01/22",
                 end_date: "10/13/24",
-                duration: "2+ years",
+                duration: "2+ " + t("common.years"),
                 company_name: "MyFutureAI",
                 position: t("experience.exp2position"),
                 summary: t("experience.exp2summary"),
@@ -92,7 +92,7 @@ const Experience = () => {
                 key: "exp-3",
                 start_date: "01/01/20",
                 end_date: "03/01/20",
-                duration: "2 months",
+                duration: "2 " + t("common.months"),
                 company_name: t("experience.exp3company"),
                 position: t("experience.exp3position"),
                 summary: t("experience.exp3summary"),
@@ -103,7 +103,7 @@ const Experience = () => {
                 key: "exp-4",
                 start_date: "06/01/20",
                 end_date: "12/01/20",
-                duration: "6 months",
+                duration: "6 " + t("common.months"),
                 company_name: t("experience.exp4company"),
                 position: t("experience.exp4position"),
                 summary: t("experience.exp4summary"),
@@ -121,7 +121,7 @@ const Experience = () => {
                 duration: experience.duration
             }
         })
-    }, [])
+    }, [experiences])
 
     const moveRight = useCallback(
         () => {

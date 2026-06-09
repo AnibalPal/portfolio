@@ -1,6 +1,8 @@
 const enTranslations = {
     common: {
         goBackAction: "Go back",
+        months: "months",
+        years: "years"
     },
     home: {
         name: "Home",
