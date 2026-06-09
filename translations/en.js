@@ -10,9 +10,9 @@ const enTranslations = {
         subtitle: "Software Developer",
         about: "About",
         aboutDescP1: "Software developer with over 2 years of experience in the field. I have experience in web development technologies such as HTML, CSS, JavaScript, and TypeScript, for backend development I mostly use Python.",
-        aboutDescP2: "Feel free to check my proyects and past work experience."
+        aboutDescP2: "Feel free to check my projects and past work experience."
     },
-    proyects: {
+    projects: {
         name: "Projects",
         title: "Projects page",
         webDevelopment: "Web development",

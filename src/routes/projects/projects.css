@@ -1,14 +1,14 @@
-.proyects-container {
+.projects-container {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.proyect-type-container {
+.project-type-container {
     margin: 16px;
 }
 
-.proyect-list {
+.project-list {
     display: flex;
     gap: 64px;
     margin: 32px;

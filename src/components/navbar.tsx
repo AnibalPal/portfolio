@@ -90,7 +90,7 @@ const Navbar = () => {
                         <div className="navbar-links-container">
                             <NavLink to={"/home"} className={"navbar-link"}>{t("home.name")}</NavLink>
                             <NavLink to={"/experience"} className={"navbar-link"}>{t("experience.name")}</NavLink>
-                            <NavLink to={"/proyects"} className={"navbar-link"}>{t("proyects.name")}</NavLink>
+                            <NavLink to={"/projects"} className={"navbar-link"}>{t("projects.name")}</NavLink>
                         </div>
                         <div className="navbar-settings-container">
                             <div className="navbar-lang-switcher">

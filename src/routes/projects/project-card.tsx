@@ -1,22 +1,22 @@
 import { useContext, useState } from "react";
 
-import { IProyectsState, ProyectsContext } from "./proyects-context";
+import { IProjectsState, ProjectsContext } from "./projects-context";
 
-import "./proyect-card.css";
+import "./project-card.css";
 
-interface ProyectCardProps {
+interface ProjectCardProps {
     src: string
     name: string
     links: {
         name: string
         href?: string
-        modalProps?: IProyectsState
+        modalProps?: IProjectsState
     }[]
 }
 
-const ProyectCard = ({ src, name, links }: ProyectCardProps) => {
+const ProjectCard = ({ src, name, links }: ProjectCardProps) => {
 
-    const { modalReducer } = useContext(ProyectsContext);
+    const { modalReducer } = useContext(ProjectsContext);
     
     const [hovering, setHovering] = useState(false);
 
@@ -26,7 +26,7 @@ const ProyectCard = ({ src, name, links }: ProyectCardProps) => {
             onMouseLeave={() => { setHovering(false) }}
         >
             <img
-                className={"proyect-card-image " + (hovering ? "proyect-card-image-hover" : "")}
+                className={"project-card-image " + (hovering ? "project-card-image-hover" : "")}
                 src={src}
             />
             <p className="small">
@@ -35,13 +35,13 @@ const ProyectCard = ({ src, name, links }: ProyectCardProps) => {
             {
                 hovering &&
                 <div className="anchor">
-                    <div className="proyect-card-overlay-links">
+                    <div className="project-card-overlay-links">
                         {links.map((link, idx) => {
                             if (link.modalProps) {
                                 // Desc link is a link that opens a modal with a description
                                 return (
                                     <p
-                                        className="proyect-card-modal-link"
+                                        className="project-card-modal-link"
                                         onClick={(e) => {
                                             e.stopPropagation();
                                             modalReducer("all", link.modalProps);
@@ -50,7 +50,7 @@ const ProyectCard = ({ src, name, links }: ProyectCardProps) => {
                                     </p>
                                 )
                             } else {
-                                return <a className="proyect-card-modal-link" key={"proyect-link-" + idx} href={link.href} target="_blank">{link.name}</a>
+                                return <a className="project-card-modal-link" key={"project-link-" + idx} href={link.href} target="_blank">{link.name}</a>
                             }
                         })}
                     </div>
@@ -60,4 +60,4 @@ const ProyectCard = ({ src, name, links }: ProyectCardProps) => {
     )
 }
 
-export default ProyectCard;
+export default ProjectCard;

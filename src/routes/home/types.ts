@@ -1,4 +1,4 @@
-export type SelectOptions = "about" | "proyects" | "experience";
+export type SelectOptions = "about" | "projects" | "experience";
 
 export type StateOptions = "hovering" | "focused";
 
@@ -7,7 +7,7 @@ export interface Selection {
         hovering: boolean,
         focused: boolean
     },
-    proyects: {
+    projects: {
         hovering: boolean,
         focused: boolean
     },

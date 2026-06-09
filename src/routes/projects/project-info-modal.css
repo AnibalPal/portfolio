@@ -1,4 +1,4 @@
-.proyect-info-modal-container {
+.project-info-modal-container {
     position: absolute;
     
     border: solid;
@@ -19,23 +19,23 @@
     left: 50vw;
 }
 
-.proyect-info-modal-title-container {
+.project-info-modal-title-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 16px;
 }
 
-.proyect-info-modal-title {
+.project-info-modal-title {
     font-size: var(--font-medium);
 }
 
-.proyect-info-modal-close {
+.project-info-modal-close {
     font-size: var(--font-medium);
     cursor: pointer;
 }
 
-.proyect-info-modal-desc {
+.project-info-modal-desc {
     text-align: justify;
     font-size: var(--font-small);
 }

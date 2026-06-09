@@ -2,25 +2,25 @@ import { useEffect, useMemo, useContext } from "react";
 import { useTranslation } from "react-i18next";
 import { NavLink, useNavigate } from "react-router";
 
-import ProyectCard from "./proyect-card";
-import ProyectInfoModal from "./proyect-info-modal";
+import ProjectCard from "./project-card";
+import ProjectInfoModal from "./project-info-modal";
 
 import HuasoventurasImage from "../../assets/images/huasoventuras_thumbnail.png";
 import FlappyBirdSpaceImage from "../../assets/images/flappy_bird_space.png";
 import EtchASketch from "../../assets/images/etch-a-sketch.png";
 
-import "./proyects.css";
-import { ProyectsContext } from "./proyects-context";
+import "./projects.css";
+import { ProjectsContext } from "./projects-context";
 
-const Proyects = () => {
+const Projects = () => {
 
     const navigate = useNavigate();
 
     const { t, i18n } = useTranslation();
 
-    const { modalState, modalReducer } = useContext(ProyectsContext);
+    const { modalState, modalReducer } = useContext(ProjectsContext);
 
-    const webDevelopmentProyects = useMemo(() => {
+    const webDevelopmentProjects = useMemo(() => {
         return [
             {
                 name: "Etch a sketch",
@@ -28,7 +28,7 @@ const Proyects = () => {
                 links:
                     [
                         {
-                            name: t("proyects.tryDemo"),
+                            name: t("projects.tryDemo"),
                             href: "https://anibalpal.github.io/etch-a-sketch/"
                         },
                         {
@@ -40,7 +40,7 @@ const Proyects = () => {
         ]
     }, [i18n.language])
 
-    const gameDevelopmentProyects = useMemo(() => {
+    const gameDevelopmentProjects = useMemo(() => {
         return [
             {
                 name: "Huasoventuras",
@@ -48,15 +48,15 @@ const Proyects = () => {
                 links:
                     [
                         {
-                            name: t("proyects.playGame"),
+                            name: t("projects.playGame"),
                             href: "https://apg-games.itch.io/huasoventuras"
                         },
                         {
-                            name: t("proyects.information"),
+                            name: t("projects.information"),
                             modalProps: {
                                 infoModalOpen: true,
                                 infoModalTitle: "Huasoventuras",
-                                infoModalDesc: t("proyects.huasoventurasDesc")
+                                infoModalDesc: t("projects.huasoventurasDesc")
                             }
                         }
                     ]
@@ -67,7 +67,7 @@ const Proyects = () => {
                 links:
                     [
                         {
-                            name: t("proyects.playGame"),
+                            name: t("projects.playGame"),
                             href: "https://apg-games.itch.io/space-flappy-bird-clone"
                         }
                     ]
@@ -75,7 +75,7 @@ const Proyects = () => {
         ]
     }, [i18n.language])
 
-    // Might add some college proyects
+    // Might add some college projects
     // const otherApps = useMemo(() => {
     //     return [
     //         {
@@ -84,11 +84,11 @@ const Proyects = () => {
     //             links:
     //                 [
     //                     {
-    //                         name: t("proyects.information"),
+    //                         name: t("projects.information"),
     //                         modalProps: {
     //                             infoModalOpen: true,
     //                             infoModalTitle: "Reinforcement Learning in Fighting games",
-    //                             infoModalDesc: "My undergraduate thesis proyect, I used pytorch to apply a reinforcement type agent to a fighting videogame to research how would that agent handle that environment."
+    //                             infoModalDesc: "My undergraduate thesis project, I used pytorch to apply a reinforcement type agent to a fighting videogame to research how would that agent handle that environment."
     //                         }
     //                     }
     //                 ]
@@ -129,32 +129,32 @@ const Proyects = () => {
                 {/* NOTE: had to add all blur effects on each component instead of the base component in order to have
                  the blur effect and the fade in on page load */}
                 <div className={"page-title-container " + (modalState.infoModalOpen ? "blur-bg" : "unblur-bg")}>
-                    <p className="page-title">{t("proyects.name")}</p>
+                    <p className="page-title">{t("projects.name")}</p>
                     <div className="page-title-underline" />
                 </div>
-                <div className={"proyects-container " + (modalState.infoModalOpen ? "blur-bg" : "unblur-bg")}>
-                    <div className="proyect-type-container">
-                        <p className="medium">{t("proyects.webDevelopment")}</p>
-                        <div className="proyect-list">
+                <div className={"projects-container " + (modalState.infoModalOpen ? "blur-bg" : "unblur-bg")}>
+                    <div className="project-type-container">
+                        <p className="medium">{t("projects.webDevelopment")}</p>
+                        <div className="project-list">
                             {
-                                webDevelopmentProyects.map((proyect, idx) => {
+                                webDevelopmentProjects.map((project, idx) => {
                                     return (
-                                        <div key={"proyect-" + idx}>
-                                            <ProyectCard {...proyect} />
+                                        <div key={"project-" + idx}>
+                                            <ProjectCard {...project} />
                                         </div>
                                     )
                                 })
                             }
                         </div>
                     </div>
-                    <div className="proyect-type-container">
-                        <p className="medium">{t("proyects.gameDevelopment")}</p>
-                        <div className="proyect-list">
+                    <div className="project-type-container">
+                        <p className="medium">{t("projects.gameDevelopment")}</p>
+                        <div className="project-list">
                             {
-                                gameDevelopmentProyects.map((proyect, idx) => {
+                                gameDevelopmentProjects.map((project, idx) => {
                                     return (
-                                        <div key={"proyect-" + idx}>
-                                            <ProyectCard {...proyect} />
+                                        <div key={"project-" + idx}>
+                                            <ProjectCard {...project} />
                                         </div>
                                     )
                                 })
@@ -167,10 +167,10 @@ const Proyects = () => {
                 </NavLink>
             </div>
             {modalState.infoModalOpen &&
-                <ProyectInfoModal />
+                <ProjectInfoModal />
             }
         </>
     )
 }
 
-export default Proyects;
+export default Projects;

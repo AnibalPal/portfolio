@@ -170,6 +170,8 @@ const Experience = () => {
 
     }, [])
 
+    const {key: exp_key, ...exp_rest} = experiences[selectedExperience]
+
     return (
         <div className="page-container">
             <div className="page-title-container">
@@ -184,7 +186,7 @@ const Experience = () => {
                     moveLeft={moveLeft}
                     moveRight={moveRight}
                 />
-                <ExperienceEntry {...experiences[selectedExperience]} />
+                <ExperienceEntry key={exp_key} {...exp_rest} />
             </div>
             <NavLink className="go-back" to="/home">
                 {t("common.goBackAction")}

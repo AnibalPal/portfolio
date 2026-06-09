@@ -2,22 +2,22 @@ import { createContext, useState } from "react";
 
 type ContextActions = "all" | "open" | "title" | "desc";
 
-export interface IProyectsState {
+export interface IProjectsState {
     infoModalOpen: boolean
     infoModalTitle: string | null
     infoModalDesc: string | null
 }
 
-interface IProyectsContext {
-    modalState: IProyectsState
+interface IProjectsContext {
+    modalState: IProjectsState
     modalReducer: Function
 }
 
-interface IProyectContextComponent {
+interface IProjectContextComponent {
     children: React.ReactNode
 }
 
-export const ProyectsContext = createContext<IProyectsContext>({
+export const ProjectsContext = createContext<IProjectsContext>({
     modalState: {
         infoModalOpen: false,
         infoModalTitle: null,
@@ -26,18 +26,18 @@ export const ProyectsContext = createContext<IProyectsContext>({
     modalReducer: () => { }
 });
 
-const ProyectsContextComponent = ({ children }: IProyectContextComponent) => {
+const ProjectsContextComponent = ({ children }: IProjectContextComponent) => {
 
-    const [modalState, setModalState] = useState<IProyectsState>({
+    const [modalState, setModalState] = useState<IProjectsState>({
         infoModalOpen: false,
         infoModalTitle: null,
         infoModalDesc: null
     });
 
-    const modalStateReducer = (type: ContextActions, value: IProyectsState | boolean | string) => {
+    const modalStateReducer = (type: ContextActions, value: IProjectsState | boolean | string) => {
         switch (type) {
             case "all":
-                setModalState(value as IProyectsState);
+                setModalState(value as IProjectsState);
                 break;
             case "open":
                 setModalState((state) => {
@@ -61,14 +61,14 @@ const ProyectsContextComponent = ({ children }: IProyectContextComponent) => {
     }
 
     return (
-        <ProyectsContext.Provider
+        <ProjectsContext.Provider
             value={{
                 modalState: modalState,
                 modalReducer: modalStateReducer
             }} >
             {children}
-        </ProyectsContext.Provider>
+        </ProjectsContext.Provider>
     )
 }
 
-export default ProyectsContextComponent;
+export default ProjectsContextComponent;

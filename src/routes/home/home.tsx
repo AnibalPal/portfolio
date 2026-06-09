@@ -22,14 +22,13 @@ const Home = () => {
             hovering: false,
             focused: false
         },
-        proyects: {
+        projects: {
             hovering: false,
             focused: false
         },
     });
 
     const handleChange = (key: SelectOptions, state: StateOptions, value: boolean): void => {
-        console.log(deviceType)
         let newSelected = { ...selected };
         newSelected[key][state] = value;
         setSelected(newSelected);
@@ -65,8 +64,8 @@ const Home = () => {
                         selected={selected}
                     />
                     <RouteOption
-                        name={t("proyects.name")}
-                        route="proyects"
+                        name={t("projects.name")}
+                        route="projects"
                         handleChange={handleChange}
                         selected={selected}
                     />

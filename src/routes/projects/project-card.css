@@ -1,4 +1,4 @@
-.proyect-card-overlay-links {
+.project-card-overlay-links {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -10,17 +10,17 @@
     gap: 8px;
 }
 
-.proyect-card-image {
+.project-card-image {
     width: 300px;
     height: 200px;
 }
 
-.proyect-card-image-hover {
+.project-card-image-hover {
     transition: all 0.2s;
     opacity: 0.2;
 }
 
-.proyect-card-modal-link {
+.project-card-modal-link {
     cursor: pointer;
     text-decoration: underline;
     font-size: var(--font-medium);

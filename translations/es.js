@@ -10,17 +10,17 @@ const esTranslations = {
         subtitle: "Ingeniero Informático",
         about: "Sobre mí",
         aboutDescP1: "Ingeniero informático con mas de dos años de experiencia en desarrollo de software. Tengo experiencia en tecnologías web tales como HTML, CSS, JavaScript y TypeScript, para desarrollo backend generalmente utilizo Python.",
-        aboutDescP2: "Te invito a revisar mis proyectos y experiencia de trabajo.",
+        aboutDescP2: "Te invito a revisar mis projectos y experiencia de trabajo.",
     },
-    proyects: {
-        name: "Proyectos",
-        title: "Página proyectos",
+    projects: {
+        name: "Projectos",
+        title: "Página projectos",
         webDevelopment: "Desarrollo web",
         gameDevelopment: "Desarrollo videojuegos",
         playGame: "Jugar",
         information: "Información",
         tryDemo: "Probar demo",
-        huasoventurasDesc: "Proyecto realizado para la LAGS (Latin American Games Showcase) game jam; esta experiencia consiste en la creación de un videojuego en 9 días siguiendo algún tema en concreto. Fuimos dos personas en este proyecto y obtuvimos 6to lugar por votación popular."
+        huasoventurasDesc: "Projecto realizado para la LAGS (Latin American Games Showcase) game jam; esta experiencia consiste en la creación de un videojuego en 9 días siguiendo algún tema en concreto. Fuimos dos personas en este projecto y obtuvimos 6to lugar por votación popular."
     },
     experience: {
         name: "Experiencia",

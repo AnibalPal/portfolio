@@ -6,7 +6,7 @@ import App from './App.tsx'
 import About from './routes/about/about.tsx'
 import Home from './routes/home/home.tsx'
 import Experience from './routes/experience/experience.tsx'
-import ProyectsBase from './routes/proyects/proyects-base.tsx'
+import ProjectsBase from './routes/projects/projects-base.tsx'
 
 import './index.css'
 
@@ -18,7 +18,7 @@ const makeRoot = () => {
           <Route path='/' element={<App />} >
             <Route path='home' element={<Home />} />
             <Route path='about' element={<About />} />
-            <Route path='proyects' element={<ProyectsBase />} />
+            <Route path='projects' element={<ProjectsBase />} />
             <Route path='experience' element={<Experience />} />
           </Route>
         </Routes>
