@@ -21,7 +21,8 @@ const esTranslations = {
         information: "Información",
         tryDemo: "Probar demo",
         huasoventurasDesc: "Projecto desarrollado para la LAGS (Latin American Games Showcase) game jam año 2025; esta experiencia consiste en la creación de un videojuego en 9 días siguiendo algún tema en concreto. Fuimos dos personas en este projecto y obtuvimos 6to lugar por votación popular.",
-        laultimasopaipillaDesc: "Projecto desarrollado para la LAGS (Latin American Games Showcase) game jam año 2026; esta experiencia consiste en la creación de un videojuego en 9 días siguiendo algún tema en concreto. Fuimos un equipo de 5 personas en este proyecto, yo siendo el único programador, el resto fueron artistas y músicos. Quedamos en el top 25."
+        laultimasopaipillaDesc: "Projecto desarrollado para la LAGS (Latin American Games Showcase) game jam año 2026; esta experiencia consiste en la creación de un videojuego en 9 días siguiendo algún tema en concreto. Fuimos un equipo de 5 personas en este proyecto, yo siendo el único programador, el resto fueron artistas y músicos. Quedamos en el top 25.",
+        knightvslizardDesc: "Juego creado para la GMTK game jam del 2026, un juego de cartas inspirado en slay the spire."
     },
     experience: {
         name: "Experiencia",

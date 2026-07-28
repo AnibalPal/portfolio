@@ -5,6 +5,7 @@ import { NavLink, useNavigate } from "react-router";
 import ProjectCard from "./project-card";
 import ProjectInfoModal from "./project-info-modal";
 
+import KnightvsLizardImage from "../../assets/images/knight_vs_lizard_thumbnail.png";
 import LaUltimaSopaipillaImage from "../../assets/images/la_ultima_sopaipialla_thumbnail.png";
 import HuasoventurasImage from "../../assets/images/huasoventuras_thumbnail.png";
 import FlappyBirdSpaceImage from "../../assets/images/flappy_bird_space.png";
@@ -43,6 +44,25 @@ const Projects = () => {
 
     const gameDevelopmentProjects = useMemo(() => {
         return [
+            {
+                name: "Knight vs Lizard",
+                src: KnightvsLizardImage,
+                links:
+                    [
+                        {
+                            name: t("projects.playGame"),
+                            href: "https://apg-games.itch.io/knight-vs-lizard"
+                        },
+                        {
+                            name: t("projects.information"),
+                            modalProps: {
+                                infoModalOpen: true,
+                                infoModalTitle: "Knight vs Lizard",
+                                infoModalDesc: t("projects.knightvslizardDesc")
+                            }
+                        }
+                    ]
+            },
             {
                 name: "La última sopaipilla",
                 src: LaUltimaSopaipillaImage,
