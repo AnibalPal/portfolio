@@ -25,3 +25,5 @@ dist-ssr
 
 # App builds
 build/
+
+gh-pages.txt
