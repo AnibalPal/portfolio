@@ -46,6 +46,8 @@ const Home = () => {
                         {t("home.aboutDescP1")}
                         <br />
                         {t("home.aboutDescP2")}
+                        <br />
+                        {t("home.aboutDescP3")}
                     </p>
                 </div>
             }

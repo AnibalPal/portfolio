@@ -6,6 +6,12 @@
     margin: 16px;
 }
 
+.navbar-author-container {
+    display: flex;
+    align-items: center;
+    gap: 8px
+}
+
 .navbar-author {
     font-size: var(--font-large);
     letter-spacing: 2px;

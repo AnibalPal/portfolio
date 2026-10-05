@@ -1,0 +1,9 @@
+.contact-links-container {
+    display: flex;
+    gap: 8px;
+    padding-left: 8px;
+}
+
+.contact-link-icon {
+    font-size: 24px;
+}

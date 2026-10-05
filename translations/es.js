@@ -9,8 +9,9 @@ const esTranslations = {
         title: "Página de inicio",
         subtitle: "Ingeniero Informático",
         about: "Sobre mí",
-        aboutDescP1: "Ingeniero informático con mas de dos años de experiencia en desarrollo de software. Tengo experiencia en tecnologías web tales como HTML, CSS, JavaScript y TypeScript, para desarrollo backend generalmente utilizo Python.",
-        aboutDescP2: "Te invito a revisar mis projectos y experiencia de trabajo.",
+        aboutDescP1: "Ingeniero informático con mas de 3 años de experiencia en desarrollo de software. Tengo experiencia en tecnologías web tales como HTML, CSS, JavaScript y TypeScript, para desarrollo backend generalmente utilizo Python.",
+        aboutDescP2: "Tambien he desarrollado videojuegos utilizando el motor gráfico Godot.",
+        aboutDescP3: "Te invito a revisar mis projectos y experiencia de trabajo.",
     },
     projects: {
         name: "Projectos",

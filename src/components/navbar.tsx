@@ -10,6 +10,7 @@ import LanguageSelect from "./language-select";
 
 import "./navbar.css";
 import HamburgerIcon from "./icons/hamburger-icon";
+import ContactLinks from "./contact-links";
 
 const Navbar = () => {
 
@@ -58,7 +59,10 @@ const Navbar = () => {
                 deviceType === "mobile" ?
                     <div className="navbar-base-container-mobile">
                         <div className="navbar-content-container-mobile">
-                            <p className="navbar-author">Anibal Palomo</p>
+                            <div className="navbar-author-container">
+                                <p className="navbar-author">Anibal Palomo</p>
+                                <ContactLinks />
+                            </div>    
                             <p className="navbar-subtitle">{t("home.subtitle")}</p>
                         </div>
                         <div className="navbar-hamburger-container-mobile" onClick={handleOpenSettingsMobile}>
@@ -86,7 +90,10 @@ const Navbar = () => {
                     </div>
                     :
                     <>
-                        <p className="navbar-author">Anibal Palomo</p>
+                        <div className="navbar-author-container">
+                            <p className="navbar-author">Anibal Palomo</p>
+                            <ContactLinks />
+                        </div>
                         <div className="navbar-links-container">
                             <NavLink to={"/home"} className={"navbar-link"}>{t("home.name")}</NavLink>
                             <NavLink to={"/experience"} className={"navbar-link"}>{t("experience.name")}</NavLink>

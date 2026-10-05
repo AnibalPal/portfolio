@@ -9,8 +9,9 @@ const enTranslations = {
         title: "Home page",
         subtitle: "Software Developer",
         about: "About",
-        aboutDescP1: "Software developer with over 2 years of experience in the field. I have experience in web development technologies such as HTML, CSS, JavaScript, and TypeScript, for backend development I mostly use Python.",
-        aboutDescP2: "Feel free to check my projects and past work experience."
+        aboutDescP1: "Software engineer with over 3 years of experience in the field. I have experience in web development technologies such as HTML, CSS, JavaScript, and TypeScript, for backend development I mostly use Python.",
+        aboutDescP2: "I have also been developing videogames using the Godot game engine.",
+        aboutDescP3: "Feel free to check my projects and past work experience."
     },
     projects: {
         name: "Projects",
